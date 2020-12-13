@@ -10,6 +10,7 @@ namespace Prism.Generators.PageConstants
 
         public void OnVisitSyntaxNode(SyntaxNode syntaxNode)
         {
+            // Filter out any syntax nodes that are ones we care about:
             if (syntaxNode is TypeDeclarationSyntax typeDeclarationSyntax)
             {
                 foreach (AttributeListSyntax attributeList in typeDeclarationSyntax.AttributeLists)
