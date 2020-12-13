@@ -81,7 +81,7 @@ namespace Prism.Generators.PageConstants
             indentWriter.WriteLine("}");
 
             // Add the source:
-            context.AddSource("NavigationConstants.g.cs", SourceText.From(writer.ToString(), Encoding.UTF8));
+            context.AddSource("PageConstants.g.cs", SourceText.From(writer.ToString(), Encoding.UTF8));
         }
     }
 }
