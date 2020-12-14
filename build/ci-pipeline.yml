@@ -13,6 +13,8 @@ parameters:
 variables:
   - group: pipeline-variables
 
+triggers: none
+
 pr:
 - main
 

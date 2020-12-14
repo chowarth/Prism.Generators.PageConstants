@@ -19,6 +19,8 @@ trigger:
       - main
       - 'refs/tags/v*'
 
+pr: none
+
 stages:
 - stage: Build
   jobs:
@@ -26,11 +28,6 @@ stages:
     parameters:
       projects: $(build.Project)
       configuration: ${{ parameters.Configuration }}
-
-  - task: PublishBuildArtifacts@1
-      inputs:
-        artifactName: 'drop'
-        pathToPublish: '$(Build.ArtifactStagingDirectory)'
 
 # Deploy to Artifacts feed if on 'main'
 - stage: DevOps

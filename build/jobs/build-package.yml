@@ -28,7 +28,13 @@ jobs:
     displayName: "dotnet pack"
     inputs:
       command: 'pack'
-      configurationToPack: '--configuration ${{ parameters.configuration }}'
+      configurationToPack: '--configuration ${{ parameters.Configuration }}'
       packagesToPack: ${{ parameters.projects }}
       includesymbols: true
       versioningScheme: 'off'
+
+  - task: PublishBuildArtifacts@1
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    inputs:
+      artifactName: 'drop'
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
