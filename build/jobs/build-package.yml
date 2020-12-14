@@ -28,7 +28,7 @@ jobs:
     displayName: "dotnet pack"
     inputs:
       command: 'pack'
-      configurationToPack: '--configuration ${{ parameters.Configuration }}'
+      configurationToPack: '--configuration ${{ parameters.configuration }}'
       packagesToPack: ${{ parameters.projects }}
       includesymbols: true
       versioningScheme: 'off'
