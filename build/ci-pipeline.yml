@@ -14,7 +14,7 @@ variables:
   - group: pipeline-variables
 
 pr:
-- master
+- main
 
 jobs:
 - template: ./jobs/build-package.yml
