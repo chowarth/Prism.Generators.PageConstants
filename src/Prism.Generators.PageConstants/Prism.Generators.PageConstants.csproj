@@ -12,8 +12,9 @@
   </PropertyGroup>
   
   <PropertyGroup>
-	<MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
-	<MinVerDefaultPreReleasePhase>pre</MinVerDefaultPreReleasePhase>
+    <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
+    <MinVerDefaultPreReleasePhase>pre</MinVerDefaultPreReleasePhase>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
   </PropertyGroup>
 
   <ItemGroup>
