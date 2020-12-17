@@ -46,6 +46,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+	<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="True" PackagePath="analyzers/dotnet/cs"  Visible="false"/>
   </ItemGroup>
 
 </Project>
