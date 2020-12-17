@@ -2,7 +2,7 @@
 
 [![Build Status](https://dev.azure.com/chowarth23/Prism.Generators.PageConstants/_apis/build/status/Release-Pipeline?branchName=main)](https://dev.azure.com/chowarth23/Prism.Generators.PageConstants/_build/latest?definitionId=11&branchName=main)
 
-Are you tired of relying on hard-coded strings or manually maintaining a set of constants for navigation when using Prism? If so, then we've the library for you! Our forever friends C# & Roslyn have got some helpful features that we can take advangtage of to make your life easier!
+Are you tired of relying on hard-coded strings or manually maintaining a set of constants for navigation when using Prism? If so, then this is the library for you! Our forever friends C# & Roslyn have got some helpful features that we can take advangtage of to make your life easier!
 
 `Prism.Generators.PageConstants` will automagically generate a class that contains all the constants you'll need for registering pages for navigation and for use in navigation itself.
 
