@@ -79,6 +79,6 @@ stages:
         command: custom
         custom: nuget
         arguments: >
-          push '$(build.PackagesToPush)'
-          -s '$(nuget.SourceUrl)'
-          -k '$(nuget.ApiKey)'
+          push $(build.PackagesToPush)
+          -s $(nuget.SourceUrl)
+          -k $(nuget.ApiKey)
