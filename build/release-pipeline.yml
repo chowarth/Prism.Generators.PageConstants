@@ -59,7 +59,7 @@ stages:
 # Deploy to NuGet if the build was triggered by a tag
 - stage: NuGet
   dependsOn: Build
-  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v'))
+  # condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v'))
   jobs:
   - job:
     displayName: 'Push to NuGet.org'
