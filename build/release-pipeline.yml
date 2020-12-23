@@ -72,13 +72,13 @@ stages:
       inputs:
         artifact: 'drop'
         path: '$(Pipeline.Workspace)'
-
+    
     - task: DotNetCoreCLI@2
       displayName: "dotnet push"
       inputs:
-        command: 'push'
-        nobuild: true
-        nugetFeedType: 'external'
-        externalEndpoint: 'nuget-connection'
-        versioningScheme: 'off'
-        packagesToPush: '$(build.PackagesToPush)'
+        command: custom
+        custom: nuget
+        arguments: >
+          push '$(build.PackagesToPush)'
+          -s '$(nuget.SourceUrl)'
+          -k '$(nuget.ApiKey)'
